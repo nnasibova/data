@@ -1,0 +1,162 @@
+{
+    "document_id": 9665,
+    "document_information": {
+        "status": "TAMAMLANDI",
+        "created_by": "Musayev Teymur",
+        "created_at": "2022-08-11T07:37:00.000000Z",
+        "prosecutors": [
+            {
+                "organization_name": "Azərbaycan Respublikası Baş Prokurorluğu / Cinayət təqibindən kənar icraatlar idarəsi",
+                "position": "Prokuror",
+                "rank": "Kiçik ədliyyə müşaviri",
+                "full_name": "Əliyev Vüsal Azad"
+            },
+            {
+                "organization_name": "Azərbaycan Respublikası Baş Prokurorluğu / Cinayət təqibindən kənar icraatlar idarəsi",
+                "position": "Böyük prokuror",
+                "rank": "ΙΙ dərəcəli hüquqşünas",
+                "full_name": "Zakirzadə Babək Yamən"
+            }
+        ],
+        "guests": []
+    },
+    "latest_instance": "7(007)-3456/2020",
+    "individual": {
+        "pin": "",
+        "individual_photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "first_name": "Sarah",
+        "last_name": "Bolger",
+        "father_name": "Derek",
+        "gender": "Qadın",
+        "birth_date": "04.08.1994",
+        "birth_country": "Dubai",
+        "birth_state": "Dublin",
+        "citizenship": "Vətəndaşlığı olmayan",
+        "previous_conviction": "Məhkum olunmuş"
+    },
+    "complaint": {
+        "id": 9564,
+        "complaint_type": "Təqdimat",
+        "description": "Cəzanın çəkilməmiş hissəsini daha yüngül cəza ilə əvəz edilmə",
+        "penitentiary_organization": "Zərdab Rayon İcra və Probasiya Şöbəsi",
+        "complaint_description": "Cəzanı icra edən qurum tərəfindən məhkum mənfi xarakterizə olunur",
+        "fable_of_work": "Yoxdur",
+        "events": [
+            {
+                "id": 65,
+                "punishment_type": "İslah işləri",
+                "description": "Töhmət",
+                "event_date": "11.08.2022",
+                "measure_type": "Tənbeh"
+            }
+        ]
+    },
+    "sentences": {
+        "id": 9655,
+        "court_name": "ABŞERON RAYON MƏHKƏMƏSI",
+        "sentence_date": "11.08.2022",
+        "is_conditional": "Şərti",
+        "conditional_start_date": "11.08.2022",
+        "practice_days": {
+            "year": "12",
+            "month": "11",
+            "day": "13"
+        },
+        "punishments": [
+            {
+                "id": 9990,
+                "type": "1",
+                "punishment_name": "Tərbiyyəvi xarakterli məcburi tədbir",
+                "values": {
+                    "day": {
+                        "year": "2",
+                        "month": "5",
+                        "day": "14"
+                    }
+                },
+                "start_date": "11.08.2022",
+                "punishment_type_id": "0468BCA1-AC55-40F2-82AB-B176A7C00F33"
+            }
+        ],
+        "sentence_special_law_items": [
+            {
+                "classification_of_crime": null,
+                "ordinary": "187",
+                "norm": " Əmlakı ehtiyatsızlıqdan məhv etmə və ya zədələmə"
+            },
+            {
+                "classification_of_crime": null,
+                "ordinary": "154.1",
+                "norm": " İrqindən milliyyətindən dinindən dilindən cinsindən, mənşəyindən, əmlak vəziyyətindən, qulluq mövqeyindən, əqidəsindən, siyasi partiyalara, həmkarlar ittifaqlarına və digər ictimai birliklərə mənsubiyyətindən asılı olaraq şəxsin hüquq və qanuni mənafelərinə zərər vurmaqla şəxsin bərabərlik hüququnu pozma"
+            },
+            {
+                "classification_of_crime": null,
+                "ordinary": "154",
+                "norm": " Bərabərlik hüququnu pozma"
+            },
+            {
+                "classification_of_crime": null,
+                "ordinary": "143.3.4",
+                "norm": ""
+            }
+        ],
+        "sentence_global_law_items": [
+            {
+                "classification_of_crime": null,
+                "ordinary": "43",
+                "norm": " Əsas və əlavə cəzalar"
+            },
+            {
+                "classification_of_crime": null,
+                "ordinary": "23.4",
+                "norm": ""
+            },
+            {
+                "classification_of_crime": null,
+                "ordinary": "1",
+                "norm": " Azərbaycan Respublikasının cinayət qanunu"
+            },
+            {
+                "classification_of_crime": null,
+                "ordinary": "1.2",
+                "norm": " Bu Məcəllə Azərbaycan Respublikasının Konstitusiyasına, beynəlxalq hüququn hamılıqla qəbul edilmiş normalarına və prinsiplərinə əsaslanır"
+            },
+            {
+                "classification_of_crime": null,
+                "ordinary": "23",
+                "norm": " Sərxoş halda törədilmiş cinayətə görə məsuliyyət"
+            }
+        ],
+        "extra_punishments": [
+            {
+                "id": 9991,
+                "type": "2",
+                "punishment_name": "Nəqliyyat vasitəsini idarəetmə hüququndan məhrum etmə",
+                "values": {
+                    "day": {
+                        "year": "5",
+                        "month": "11",
+                        "day": "24"
+                    }
+                },
+                "start_date": "11.08.2022",
+                "punishment_type_id": "D96801AB-B697-4439-8CBD-66108846C58A"
+            },
+            {
+                "id": 9992,
+                "type": "2",
+                "punishment_name": "Cərimə",
+                "values": {
+                    "money": "156"
+                },
+                "start_date": null,
+                "punishment_type_id": "0F9A1065-08B4-4A4A-B6C2-A10DC160F157"
+            }
+        ]
+    },
+    "status": "2",
+    "is_watchlist": 0,
+    "instruction_notification_view": 0,
+    "latest_prosecutor": "E41184C5-F8FA-4D2D-B169-007947D6FA3A",
+    "latest_head_prosecutor": "D7832635-C2F4-4644-91EB-A17380A7E72B"
+}
