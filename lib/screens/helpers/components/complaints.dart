@@ -4,10 +4,8 @@ import 'package:data_json/screens/helpers/widgets/listforinfo.dart';
 import 'package:data_json/screens/helpers/constants/app_style.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/prosecutors_view.dart';
-
 class Complaints extends StatelessWidget {
-  Complaints({Key? key}) : super(key: key);
+  const Complaints({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +15,11 @@ class Complaints extends StatelessWidget {
         builder: (context, snapshot) {
           var newData = json.decode(snapshot.data.toString());
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           var dataDocument = newData['complaint'];
           return ListView.separated(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             shrinkWrap: true,
             separatorBuilder: (context, index) {
               return const SizedBox(height: 16);
@@ -69,12 +67,13 @@ class Complaints extends StatelessWidget {
                               text: 'Fable of work',
                               mainText: dataDocument["fable_of_work"],
                             ),
-                            InfoList(
+                            const InfoList(
                               text: 'Events:',
                               mainText: "",
                             ),
-                             SizedBox(
-                               height: MediaQuery.of(context).size.height/5, child: ComplaintEvents()),
+                            SizedBox(
+                                height: MediaQuery.of(context).size.height / 5,
+                                child: const ComplaintEvents()),
                           ]),
                     ),
                   ),

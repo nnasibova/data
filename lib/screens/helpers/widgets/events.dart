@@ -1,8 +1,5 @@
 import 'dart:convert';
-
-import 'package:data_json/screens/helpers/constants/app_style.dart';
 import 'package:data_json/screens/helpers/widgets/rowforinfo.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ComplaintEvents extends StatefulWidget {
@@ -21,7 +18,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
         builder: (context, snapshot) {
           var newData = json.decode(snapshot.data.toString());
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           List dataDocument = newData['complaint']['events'];
           return ListView.builder(
@@ -33,7 +30,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                      color: Color.fromARGB(255, 226, 222, 222),
+                      color: const Color.fromARGB(255, 226, 222, 222),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: GestureDetector(
@@ -45,7 +42,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    title: Text("Events"),
+                                    title: const Text("Events"),
                                     actions: [
                                       Padding(
                                         padding: const EdgeInsets.all(16.0),
@@ -61,7 +58,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
                                                   .toString(),
                                               text: 'id',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -69,7 +66,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
                                                   ['punishment_type'],
                                               text: 'Punishment type:',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -77,7 +74,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
                                                   ['description'],
                                               text: 'Description:',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -86,7 +83,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
                                                   .toString(),
                                               text: 'Event date:',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -111,7 +108,7 @@ class _ComplaintEventsState extends State<ComplaintEvents> {
                                     ['punishment_type'],
                                 text: 'Punishment type:',
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               DetailsRow(

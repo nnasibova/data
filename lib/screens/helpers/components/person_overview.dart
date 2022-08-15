@@ -4,7 +4,7 @@ import 'package:data_json/screens/helpers/constants/app_style.dart';
 import 'package:flutter/material.dart';
 
 class PersonInfo extends StatelessWidget {
-  PersonInfo({Key? key}) : super(key: key);
+  const PersonInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,11 @@ class PersonInfo extends StatelessWidget {
         builder: (context, snapshot) {
           var newData = json.decode(snapshot.data.toString());
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           var dataIndividuals = newData['individual'];
           return ListView.separated(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             shrinkWrap: true,
             separatorBuilder: (context, index) {
               return const SizedBox(height: 16);
@@ -42,7 +42,7 @@ class PersonInfo extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
@@ -52,9 +52,10 @@ class PersonInfo extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(10),
                                     color: Colors.grey.withOpacity(0.5)),
                                 child: Image.network(
-                                  dataIndividuals['individual_photo'], fit: BoxFit.cover,
+                                  dataIndividuals['individual_photo'],
+                                  fit: BoxFit.cover,
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Text(

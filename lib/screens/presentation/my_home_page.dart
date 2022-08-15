@@ -1,17 +1,14 @@
 import 'dart:convert';
-
 import 'package:data_json/screens/helpers/components/person_overview.dart';
 import 'package:data_json/screens/helpers/components/sentences.dart';
 import 'package:data_json/screens/helpers/constants/app_style.dart';
 import 'package:data_json/screens/helpers/widgets/listforinfo.dart';
-import 'package:data_json/screens/helpers/widgets/rowforinfo.dart';
 import 'package:flutter/material.dart';
-
 import '../helpers/components/complaints.dart';
 import '../helpers/components/doc_info.dart';
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +23,7 @@ class MyHomePage extends StatelessWidget {
                 builder: (context, snapshot) {
                   var newData = json.decode(snapshot.data.toString());
                   if (!snapshot.hasData) {
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   }
                   return Column(
                     children: [
@@ -37,19 +34,19 @@ class MyHomePage extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      PersonInfo(),
+                      const PersonInfo(),
                       const SizedBox(
                         height: 20,
                       ),
-                      Complaints(),
+                      const Complaints(),
                       const SizedBox(
                         height: 20,
                       ),
-                      Sentences(),
+                      const Sentences(),
                       const SizedBox(
                         height: 20,
                       ),
-                      DocumentInfo(),
+                      const DocumentInfo(),
                       InfoList(text: 'Status', mainText: newData['status']),
                       InfoList(
                           text: 'Is watchlist',

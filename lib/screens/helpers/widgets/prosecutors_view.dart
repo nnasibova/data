@@ -1,10 +1,6 @@
 import 'dart:convert';
-
 import 'package:data_json/screens/helpers/constants/app_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ProsecutorsInfo extends StatefulWidget {
   const ProsecutorsInfo({Key? key}) : super(key: key);
@@ -22,7 +18,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
         builder: (context, snapshot) {
           var newData = json.decode(snapshot.data.toString());
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           List dataDocument = newData['document_information']['prosecutors'];
           return ListView.builder(
@@ -34,7 +30,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                      color: Color.fromARGB(255, 226, 222, 222),
+                      color: const Color.fromARGB(255, 226, 222, 222),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: GestureDetector(
@@ -46,7 +42,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    title: Text("Prosecutors"),
+                                    title: const Text("Prosecutors"),
                                     actions: [
                                       Padding(
                                         padding: const EdgeInsets.all(16.0),
@@ -56,7 +52,6 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
                                           children: [
-                                            
                                             Row(
                                               children: [
                                                 SizedBox(
@@ -71,7 +66,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                                         TextStyles.styleForBody,
                                                   ),
                                                 ),
-                                                SizedBox(
+                                                const SizedBox(
                                                   width: 10,
                                                 ),
                                                 SizedBox(
@@ -89,7 +84,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             Row(
@@ -99,7 +94,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                                   style:
                                                       TextStyles.styleForBody,
                                                 ),
-                                                SizedBox(
+                                                const SizedBox(
                                                   width: 10,
                                                 ),
                                                 Text(
@@ -110,7 +105,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             Row(
@@ -118,7 +113,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                                 Text("Rank:",
                                                     style: TextStyles
                                                         .styleForBody),
-                                                SizedBox(
+                                                const SizedBox(
                                                   width: 10,
                                                 ),
                                                 Text(
@@ -127,7 +122,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                                         .styleForInfo),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             Row(
@@ -135,7 +130,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                                 Text("Full name:",
                                                     style: TextStyles
                                                         .styleForBody),
-                                                SizedBox(
+                                                const SizedBox(
                                                   width: 10,
                                                 ),
                                                 Text(
@@ -168,7 +163,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                       style: TextStyles.styleForBody,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   SizedBox(
@@ -183,7 +178,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                   ),
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               Row(
@@ -192,7 +187,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                     "Position:",
                                     style: TextStyles.styleForBody,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   Text(
@@ -201,7 +196,7 @@ class _ProsecutorsInfoState extends State<ProsecutorsInfo> {
                                   ),
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                             ],

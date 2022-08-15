@@ -3,10 +3,15 @@ import 'package:data_json/screens/helpers/widgets/rowforinfo.dart';
 import 'package:flutter/material.dart';
 
 class PunishmentDetails extends StatefulWidget {
- final String punishmentType;
+  final String punishmentType;
   final String title;
   final String values;
-  const PunishmentDetails({Key? key, required this.punishmentType, required this.title, required this.values}) : super(key: key);
+  const PunishmentDetails(
+      {Key? key,
+      required this.punishmentType,
+      required this.title,
+      required this.values})
+      : super(key: key);
 
   @override
   State<PunishmentDetails> createState() => _PunishmentDetailsState();
@@ -21,7 +26,7 @@ class _PunishmentDetailsState extends State<PunishmentDetails> {
         builder: (context, snapshot) {
           var newData = json.decode(snapshot.data.toString());
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           List dataDocument = newData['sentences'][widget.punishmentType];
           return ListView.builder(
@@ -33,7 +38,7 @@ class _PunishmentDetailsState extends State<PunishmentDetails> {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                      color: Color.fromARGB(255, 226, 222, 222),
+                      color: const Color.fromARGB(255, 226, 222, 222),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: GestureDetector(
@@ -61,7 +66,7 @@ class _PunishmentDetailsState extends State<PunishmentDetails> {
                                                   .toString(),
                                               text: 'id',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -69,7 +74,7 @@ class _PunishmentDetailsState extends State<PunishmentDetails> {
                                                   ['type'],
                                               text: 'Type:',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -78,20 +83,21 @@ class _PunishmentDetailsState extends State<PunishmentDetails> {
                                               text: 'Punishment name:',
                                             ),
                                             DetailsRow(
-                                              mainText:dataDocument[index]
-                                                  ['values'].toString(),
+                                              mainText: dataDocument[index]
+                                                      ['values']
+                                                  .toString(),
                                               text: 'Day',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
-
                                             ),
                                             DetailsRow(
                                               mainText: dataDocument[index]
-                                                      ['start_date'].toString(),
+                                                      ['start_date']
+                                                  .toString(),
                                               text: 'Start date',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -116,11 +122,12 @@ class _PunishmentDetailsState extends State<PunishmentDetails> {
                                     ['punishment_name'],
                                 text: 'Punishment name',
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               DetailsRow(
-                                mainText: dataDocument[index]['start_date'].toString(),
+                                mainText: dataDocument[index]['start_date']
+                                    .toString(),
                                 text: 'Start date:',
                               ),
                             ],

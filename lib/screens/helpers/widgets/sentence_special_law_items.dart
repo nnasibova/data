@@ -5,12 +5,11 @@ import 'package:flutter/material.dart';
 class SpecialLawItems extends StatefulWidget {
   final String lawItems;
   final String title;
-  const SpecialLawItems(
-      {Key? key,
-      required this.lawItems,
-      required this.title,
-     })
-      : super(key: key);
+  const SpecialLawItems({
+    Key? key,
+    required this.lawItems,
+    required this.title,
+  }) : super(key: key);
 
   @override
   State<SpecialLawItems> createState() => _SpecialLawItemsState();
@@ -25,7 +24,7 @@ class _SpecialLawItemsState extends State<SpecialLawItems> {
         builder: (context, snapshot) {
           var newData = json.decode(snapshot.data.toString());
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           List dataDocument = newData['sentences'][widget.lawItems];
           return ListView.builder(
@@ -37,7 +36,7 @@ class _SpecialLawItemsState extends State<SpecialLawItems> {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                      color: Color.fromARGB(255, 226, 222, 222),
+                      color: const Color.fromARGB(255, 226, 222, 222),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: GestureDetector(
@@ -60,12 +59,12 @@ class _SpecialLawItemsState extends State<SpecialLawItems> {
                                               MainAxisAlignment.start,
                                           children: [
                                             DetailsRow(
-                                              mainText: dataDocument[index]['classification_of_crime'
-                                                      ]
+                                              mainText: dataDocument[index][
+                                                      'classification_of_crime']
                                                   .toString(),
                                               text: 'classification_of_crime',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -74,7 +73,7 @@ class _SpecialLawItemsState extends State<SpecialLawItems> {
                                                   .toString(),
                                               text: 'ordinary:',
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             DetailsRow(
@@ -98,7 +97,7 @@ class _SpecialLawItemsState extends State<SpecialLawItems> {
                                     .toString(),
                                 text: 'classification_of_crime',
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               DetailsRow(

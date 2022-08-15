@@ -2,13 +2,11 @@ import 'dart:convert';
 import 'package:data_json/screens/helpers/widgets/listforinfo.dart';
 import 'package:data_json/screens/helpers/constants/app_style.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/prosecutors_view.dart';
 import '../widgets/punishment_details.dart';
 import '../widgets/sentence_special_law_items.dart';
 
 class Sentences extends StatelessWidget {
-  Sentences({Key? key}) : super(key: key);
+  const Sentences({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -76,8 +74,12 @@ class Sentences extends StatelessWidget {
                             SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height / 4.5,
-                                child:  PunishmentDetails(title: 'punishments', punishmentType: 'punishments', values: '2 years 5 months 14 days',)),
-                            SizedBox(
+                                child: const PunishmentDetails(
+                                  title: 'punishments',
+                                  punishmentType: 'punishments',
+                                  values: '2 years 5 months 14 days',
+                                )),
+                            const SizedBox(
                               height: 20,
                             ),
                             const InfoList(
@@ -91,7 +93,7 @@ class Sentences extends StatelessWidget {
                                   lawItems: 'sentence_special_law_items',
                                   title: 'Sentence special law items',
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             const InfoList(
@@ -105,15 +107,18 @@ class Sentences extends StatelessWidget {
                                   lawItems: 'sentence_global_law_items',
                                   title: 'Sentence global law items',
                                 )),
-                                const InfoList(
+                            const InfoList(
                               text: 'Extra punishments',
                               mainText: "",
                             ),
-                                SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height / 4,
-                                child:  PunishmentDetails(title: 'extra_punishments', punishmentType: 'extra_punishments', values: '5 years 11 months 24 days',)),
                             SizedBox(
+                                height: MediaQuery.of(context).size.height / 4,
+                                child: const PunishmentDetails(
+                                  title: 'extra_punishments',
+                                  punishmentType: 'extra_punishments',
+                                  values: '5 years 11 months 24 days',
+                                )),
+                            const SizedBox(
                               height: 20,
                             ),
                           ]),

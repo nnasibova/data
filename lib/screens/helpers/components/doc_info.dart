@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../widgets/prosecutors_view.dart';
 
 class DocumentInfo extends StatelessWidget {
-  DocumentInfo({Key? key}) : super(key: key);
+  const DocumentInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +16,11 @@ class DocumentInfo extends StatelessWidget {
         builder: (context, snapshot) {
           var newData = json.decode(snapshot.data.toString());
           if (!snapshot.hasData) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           var dataDocument = newData['document_information'];
           return ListView.separated(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             shrinkWrap: true,
             separatorBuilder: (context, index) {
               return const SizedBox(height: 16);
@@ -55,14 +55,15 @@ class DocumentInfo extends StatelessWidget {
                               text: 'Created at',
                               mainText: dataDocument["created_at"],
                             ),
-                            InfoList(
+                            const InfoList(
                               text: 'Prosecutors:',
                               mainText: "",
                             ),
                             SizedBox(
-                              height: MediaQuery.of(context).size.height/4.5,
-                              child: ProsecutorsInfo()),
-                              InfoList(
+                                height:
+                                    MediaQuery.of(context).size.height / 4.5,
+                                child: const ProsecutorsInfo()),
+                            const InfoList(
                               text: 'Qonaglar:',
                               mainText: "",
                             ),
